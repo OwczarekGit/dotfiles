@@ -43,6 +43,8 @@ echo "a4" >> /etc/papersize
 
 sed -i "s/#Color/Color/g; s/#ParallelDownloads = 5/ParallelDownloads = 20/g" /etc/pacman.conf
 
+sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
+
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
