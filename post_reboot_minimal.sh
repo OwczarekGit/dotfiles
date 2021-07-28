@@ -14,7 +14,7 @@ paru -S $(cat "minimal/packs.pacman") --noconfirm
 
 
 # Copying config files
-cp -r "minimal/.*" "$HOME/"
+cp -r ./minimal/.* "$HOME/"
 
 # Done 
 echo "Done! Now you can setup your WM of choice."
