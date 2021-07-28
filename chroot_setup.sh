@@ -39,10 +39,9 @@ echo "pl_PL.UTF-8 UTF-8" >> /etc/locale.gen
 echo "KEYMAP=pl" > /etc/vconsole.conf
 echo "a4" >> /etc/papersize
 
-echo 'MAKEFLAGS="-j4"' >> /etc/makepkg.conf
+#sed  'MAKEFLAGS="-j4"' >> /etc/makepkg.conf
 
-echo 'Color' >> /etc/pacman.conf
-echo "ParallelDownloads = 20" >> /etc/pacman.conf
+sed -i "s/#Color/Color/g; s/#ParallelDownloads = 5/ParallelDownloads = 20/g"
 
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
