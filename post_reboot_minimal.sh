@@ -8,7 +8,7 @@ sleep 5
 git clone "https://aur.archlinux.org/paru-bin.git"
 cd paru-bin && makepkg -si
 paru -Syyu
-paru -S $(cat ./minimal/packs.pacman) --noconfirm
+paru -S $(cat "./minimal/packs.pacman") --noconfirm
 
 
 # Copying config files
