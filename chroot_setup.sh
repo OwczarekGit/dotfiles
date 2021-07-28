@@ -41,7 +41,7 @@ echo "a4" >> /etc/papersize
 
 #sed  'MAKEFLAGS="-j4"' >> /etc/makepkg.conf
 
-sed -i "s/#Color/Color/g; s/#ParallelDownloads = 5/ParallelDownloads = 20/g"
+sed -i "s/#Color/Color/g; s/#ParallelDownloads = 5/ParallelDownloads = 20/g" /etc/pacman.conf
 
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
