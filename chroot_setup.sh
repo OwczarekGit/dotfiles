@@ -28,14 +28,12 @@ echo "$hostname" > /etc/hostname
 
 # Installing paru aur helper.
 pacman -Syy
-pacman -S git --noconfirm
-git clone "https://aur.archlinux.org/paru-bin.git"
-cd paru-bin && makepkg -si
+pacman -S git pipewire-pulse pipewire pipewire-alsa pipewire-jack bluez networkmanager tlp--noconfirm
 
 # Set the locale to the one i prefer.
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 
-cp locale.conf /etc/locale.conf
+cp   "./locale.conf" "/etc/locale.conf"
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "pl_PL.UTF-8 UTF-8" >> /etc/locale.gen
 echo "KEYMAP=pl" > /etc/vconsole.conf
@@ -49,9 +47,7 @@ echo "ParallelDownloads = 20" >> /etc/pacman.conf
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
-echo "BottomUP" >> /etc/paru.conf
-
-paru -Syy
+#echo "BottomUP" >> /etc/paru.conf
 
 # Enable system services.
 systemctl enable NetworkManager bluetooth tlp
