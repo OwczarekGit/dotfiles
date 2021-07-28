@@ -7,6 +7,10 @@ base
 bibata-cursor-theme-bin
 binutils
 bison
+blueman
+bluez
+bluez-plugins
+bluez-utils
 dmenu
 dotnet-runtime
 dotnet-sdk
@@ -28,6 +32,9 @@ git
 grep
 groff
 grub
+gst-plugins-bad
+gst-plugins-good
+gst-plugins-ugly
 gzip
 htop
 imagemagick
@@ -50,6 +57,7 @@ nitrogen
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+obs-studio
 openssh
 pacman
 paru-bin
