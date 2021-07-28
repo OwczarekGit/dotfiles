@@ -6,14 +6,15 @@ sleep 5
 
 # Installing programs
 git clone "https://aur.archlinux.org/paru-bin.git"
-cd paru-bin && makepkg -si
+cd paru-bin && makepkg -si && cd ..
+sudo sed -i 's/#BottomUp/BottomUp/g' "/etc/paru.conf"
+
 paru -Syyu
-paru -S $(cat "./minimal/packs.pacman") --noconfirm
+paru -S $(cat "minimal/packs.pacman") --noconfirm
 
 
 # Copying config files
-cp "./minimal/.*" "$HOME/"
-sudo echo "BottomUP" >> /etc/paru.conf
+cp -r "minimal/.*" "$HOME/"
 
 # Done 
 echo "Done! Now you can setup your WM of choice."
