@@ -1,1 +1,1 @@
-# My ArchLinux dotfiles for with different directories for different setups.
+# My ArchLinux dotfiles with different directories for different setups.
