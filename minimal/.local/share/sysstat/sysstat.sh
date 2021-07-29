@@ -21,11 +21,11 @@ getTime(){
 	echo $time
 }
 
-IP_ADDRESS=$(getIP)
-DATE=$(getDate)
-TIME=$(getTime)
-
 while true; do
+	IP_ADDRESS=$(getIP)
+	DATE=$(getDate)
+	TIME=$(getTime)
+
 	echo " IP: $IP_ADDRESS | $DATE | $TIME " > $OUTPUT_FILE
 	xsetroot -name "$(cat $OUTPUT_FILE)"
 	sleep 1
