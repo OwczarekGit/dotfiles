@@ -12,11 +12,10 @@ sudo sed -i 's/#BottomUp/BottomUp/g' "/etc/paru.conf"
 paru -Syyu
 paru -S $(cat "minimal/packs.pacman") --noconfirm
 
-
 # Copying config files
-cp -r ./minimal/.* "$HOME/"
 xdg-user-dirs-update
-fish_add_path "$HOME/.local/bin"
+cd minimal
+cp -r ./.* "$HOME"
 
 # Done 
 echo "Done! Now you can setup your WM of choice."

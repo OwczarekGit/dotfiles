@@ -5,9 +5,6 @@ echo "This script should be run as root after running arch-chroot."
 echo "If you don't meet that requirement please CTRL+C now, else wait couple seconds."
 sleep 5
 
-# Change directory to /root
-cd ~
-
 # Setup ntp and stuff.
 timedatectl set-ntp true
 hwclock --systohc
@@ -61,7 +58,8 @@ systemctl enable NetworkManager bluetooth tlp
 systemctl enable --user pipewire-pulse pipewire
 
 # Move dotfiles directory to the new created user
-chown -R $user:users /root/dotfiles
-mv "/root/dotfiles" "/home/$user/"
+cd ..
+chown -R $user:users dotfiles 
+mv "dotfiles" "/home/$user/"
 
 echo "Done now install boot loader, reboot, and run post_reboot script."
