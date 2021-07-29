@@ -1,0 +1,29 @@
+# Screenshots
+Print
+	bash -c 'cd Pictures && maim -u -q -m 10 "$(date).png"'
+
+shift + Print
+	bash -c 'cd Pictures && maim -s -u -q -m 10 "$(date)-selection.png"'
+
+ctrl + Print
+	bash -c 'maim -u -q -m 10 | xclip -selection clipboard -t image/png'
+
+ctrl + shift + Print
+	bash -c 'maim -s -u -q -m 10 | xclip -selection clipboard -t image/png'
+
+# Screen locking & Power options
+super + Pause
+	bash -c '$HOME/.local/share/syslock/syslock.sh'
+
+super + ctrl + Pause
+	bash -c '$HOME/.local/share/syslock/syslock.sh && systemctl suspend'
+
+super + ctrl + alt + End
+	systemctl poweroff
+
+super + ctrl + alt + shift + End
+	systemctl reboot
+
+# Bindings 
+super + p
+	arandr
