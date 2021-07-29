@@ -30,3 +30,6 @@ super + p
 
 super + ctrl + v
 	clipmenu
+
+super + ctrl + w
+	bash -c "$HOME/.local/share/wifimenu.sh"
