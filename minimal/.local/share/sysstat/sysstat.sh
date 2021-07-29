@@ -21,6 +21,7 @@ getTime(){
 	echo $time
 }
 
+
 while true; do
 	IP_ADDRESS=$(getIP)
 	DATE=$(getDate)
