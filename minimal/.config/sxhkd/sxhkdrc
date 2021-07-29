@@ -27,3 +27,6 @@ super + ctrl + alt + shift + End
 # Bindings 
 super + p
 	arandr
+
+super + ctrl + v
+	clipmenu

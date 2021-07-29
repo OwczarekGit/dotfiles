@@ -5,6 +5,7 @@ nitrogen --restore &
 picom --config ~/.config/picom/picom.conf &
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 xrdb ~/.Xresources &
+clipmenud &
 ~/.local/share/sysstat/sysstat.sh &
 
 while true; do
