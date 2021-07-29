@@ -2,7 +2,8 @@
 setxkbmap pl &
 udiskie -A &
 nitrogen --restore &
-picom  --config ~/.config/picom/picom.conf &
+picom --config ~/.config/picom/picom.conf &
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
 xrdb ~/.Xresources &
 ~/.local/share/sysstat/sysstat.sh &
 
