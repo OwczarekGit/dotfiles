@@ -28,7 +28,7 @@ echo "$hostname" > /etc/hostname
 
 # Installing paru aur helper.
 pacman -Syy
-pacman -S git pipewire-pulse pipewire pipewire-alsa pipewire-jack bluez networkmanager tlp--noconfirm
+pacman -S git pipewire-pulse pipewire pipewire-alsa pipewire-jack bluez networkmanager tlp --noconfirm
 
 # Set the locale to the one i prefer.
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -37,7 +37,8 @@ cp   "./locale.conf" "/etc/locale.conf"
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "pl_PL.UTF-8 UTF-8" >> /etc/locale.gen
 echo "KEYMAP=pl" > /etc/vconsole.conf
-echo "a4" >> /etc/papersize
+locale-gen
+echo "a4" > /etc/papersize
 
 #sed  'MAKEFLAGS="-j4"' >> /etc/makepkg.conf
 
