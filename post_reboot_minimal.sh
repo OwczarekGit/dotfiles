@@ -15,6 +15,7 @@ paru -S $(cat "minimal/packs.pacman") --noconfirm
 
 # Copying config files
 cp -r ./minimal/.* "$HOME/"
+xdg-user-dirs-update
 
 # Done 
 echo "Done! Now you can setup your WM of choice."
