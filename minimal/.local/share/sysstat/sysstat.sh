@@ -7,7 +7,7 @@ mkdir -p $WORK_DIR
 
 
 getIP(){
-	local IP=$(nmcli -p | grep inet4 | sed "s/inet4//g; s/ //g; s/\t//g; s/\/.*//g")
+	local IP=$(nmcli -p | grep inet4 | sed "s/inet4//g; s/ //g; s/\t//g; s/\/.*/ |/g")
 	echo $IP
 }
 
@@ -27,7 +27,7 @@ while true; do
 	DATE=$(getDate)
 	TIME=$(getTime)
 
-	echo " IP: $IP_ADDRESS | $DATE | $TIME " > $OUTPUT_FILE
+	echo " IP: $IP_ADDRESS $DATE | $TIME " > $OUTPUT_FILE
 	xsetroot -name "$(cat $OUTPUT_FILE)"
 	sleep 1
 done
