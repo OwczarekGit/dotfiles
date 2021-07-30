@@ -28,6 +28,12 @@ super + ctrl + alt + shift + End
 super + p
 	arandr
 
+super + c
+	galculator
+
+super + n
+	pcmanfm
+
 super + ctrl + c
 	clipmenu
 
