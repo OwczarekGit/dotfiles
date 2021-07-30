@@ -1,0 +1,27 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[ip]
+command=./ip.sh
+interval=8
+
+[memory]
+command=./memoryinfo.sh
+interval=5
+
+[weather]
+command=curl -fs "wttr.in/Warsaw?format=1"
+interval=300
+
+[time]
+command=date '+📅  %d.%m.%Y  |  🕒  %H:%M'
+interval=1
