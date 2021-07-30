@@ -24,6 +24,13 @@ super + ctrl + alt + End
 super + ctrl + alt + shift + End
 	systemctl reboot
 
+# Sound stuff
+super + alt + Up
+	pactl set-sink-volume @DEFAULT_SINK@ +3%
+
+super + alt + Down
+	pactl set-sink-volume @DEFAULT_SINK@ -3%
+
 # Bindings 
 super + p
 	arandr
