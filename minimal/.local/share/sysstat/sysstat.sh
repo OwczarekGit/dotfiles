@@ -11,6 +11,11 @@ getIP(){
 	echo $IP
 }
 
+getVol(){
+	local VOL=$(pamixer --get-volume)
+	echo "$VOL%"
+}
+
 getDate(){
 	local date=$(date +%d.%m.%Y)
 	echo $date
@@ -26,8 +31,9 @@ while true; do
 	IP_ADDRESS=$(getIP)
 	DATE=$(getDate)
 	TIME=$(getTime)
+	VOLUME=$(getVol)
 
-	echo " IP: $IP_ADDRESS $DATE | $TIME " > $OUTPUT_FILE
+	echo " IP: $IP_ADDRESS $DATE |  $VOLUME | $TIME " > $OUTPUT_FILE
 	xsetroot -name "$(cat $OUTPUT_FILE)"
 	sleep 1
 done
