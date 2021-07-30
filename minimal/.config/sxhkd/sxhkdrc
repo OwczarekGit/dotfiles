@@ -28,7 +28,7 @@ super + ctrl + alt + shift + End
 super + p
 	arandr
 
-super + ctrl + v
+super + ctrl + c
 	clipmenu
 
 super + ctrl + w
