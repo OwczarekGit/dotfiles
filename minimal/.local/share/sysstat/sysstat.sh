@@ -2,7 +2,7 @@
 
 WORK_DIR="$HOME/.local/share/sysstat"
 
-OUTPUT_FILE="$WORK_DIR/output"
+OUTPUT_FILE="/tmp/system_stats"
 mkdir -p $WORK_DIR
 
 
@@ -27,15 +27,9 @@ getTime(){
 }
 
 
-while true; do
-	IP_ADDRESS=$(getIP)
-	DATE=$(getDate)
-	TIME=$(getTime)
-	VOLUME=$(getVol)
+IP_ADDRESS=$(getIP)
+DATE=$(getDate)
+TIME=$(getTime)
+VOLUME=$(getVol)
 
-	echo " IP: $IP_ADDRESS $DATE |  $VOLUME | $TIME " > $OUTPUT_FILE
-	xsetroot -name "$(cat $OUTPUT_FILE)"
-	sleep 1
-done
-
-
+echo " IP: $IP_ADDRESS $DATE |  $VOLUME | $TIME " > $OUTPUT_FILE

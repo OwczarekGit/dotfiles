@@ -26,10 +26,10 @@ super + ctrl + alt + shift + End
 
 # Sound stuff
 super + alt + Up
-	pactl set-sink-volume @DEFAULT_SINK@ +3%
+	pactl set-sink-volume @DEFAULT_SINK@ +3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
 super + alt + Down
-	pactl set-sink-volume @DEFAULT_SINK@ -3%
+	pactl set-sink-volume @DEFAULT_SINK@ -3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
 # Bindings 
 super + p
