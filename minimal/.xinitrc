@@ -1,4 +1,7 @@
-#xrandr -s 1920x1080 &
+# Fix Java apps
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Startup
 setxkbmap pl &
 udiskie -A &
 nitrogen --restore &
@@ -8,6 +11,7 @@ xrdb ~/.Xresources &
 clipmenud &
 ~/.local/share/sysstat/sysstat.sh &
 
+# Run WM
 while true; do
 	dwm
 done
