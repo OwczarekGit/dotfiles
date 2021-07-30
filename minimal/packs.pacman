@@ -53,6 +53,7 @@ linux
 linux-firmware
 linuxconsole
 lxappearance-gtk3
+lxsession
 m4
 maim
 make
