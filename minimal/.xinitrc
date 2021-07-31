@@ -10,7 +10,7 @@ picom --config ~/.config/picom/picom.conf &
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 xrdb ~/.Xresources &
 clipmenud &
-~/.local/share/sysstat/sysstat.sh &
+~/.local/share/sysstat/update_sysstat_loop.sh &
 
 # Run WM
 while true; do
