@@ -32,4 +32,4 @@ DATE=$(getDate)
 TIME=$(getTime)
 VOLUME=$(getVol)
 
-echo " IP: $IP_ADDRESS $DATE |  $VOLUME | $TIME " > $OUTPUT_FILE
+echo "  $IP_ADDRESS   $VOLUME | $DATE | $TIME " > $OUTPUT_FILE
