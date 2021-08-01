@@ -20,6 +20,7 @@ bluez-utils
 clementine
 clipmenu
 csfml
+dconf-editor
 discord
 dmenu
 dotnet-runtime
@@ -59,6 +60,7 @@ intel-ucode
 jre-openjdk
 kdeconnect
 lazygit-bin
+libreoffice-fresh-pl
 libtool
 linux
 linux-firmware
@@ -119,6 +121,7 @@ ttf-liberation
 ttf-ubuntu-font-family
 udiskie
 udisks2
+ventoy-bin
 wget
 which
 xarchiver
@@ -175,4 +178,5 @@ xorg-xwininfo
 xorg-xwud
 xterm
 youtube-dl
+zathura-pdf-mupdf
 zip
