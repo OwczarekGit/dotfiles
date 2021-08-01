@@ -43,6 +43,22 @@ XF86AudioMute
 XF86AudioMicMute
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
+# Music Control
+super + grave
+	playerctl play-pause
+
+XF86AudioPause
+	playerctl pause
+
+XF86AudioPlay
+	playerctl play
+	
+super + alt + Left
+	playerctl previous
+
+super + alt + Right
+	playerctl next
+
 # Backlight control
 XF86MonBrightnessUp
 	bash -c "~/.config/sxhkd/brightness.sh +" && bash -c "~/.local/share/sysstat/update_sysstat.sh"
