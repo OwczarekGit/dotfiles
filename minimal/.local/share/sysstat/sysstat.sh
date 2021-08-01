@@ -16,6 +16,11 @@ getPower(){
 	echo "$power"
 }
 
+getBrightness(){
+	local brightness=$($WORK_DIR/backlight.sh)
+	echo "$brightness"
+}
+
 getVol(){
 	local VOL=$(pamixer --get-volume)
 	echo "$VOL%"
@@ -37,5 +42,6 @@ DATE=$(getDate)
 TIME=$(getTime)
 VOLUME=$(getVol)
 POWER=$(getPower)
+BRIGHTNESS=$(getBrightness)
 
-echo "  $IP_ADDRESS   $VOLUME | $POWER% | $DATE | $TIME " > $OUTPUT_FILE
+echo "  $IP_ADDRESS   $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE

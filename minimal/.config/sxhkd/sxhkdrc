@@ -45,10 +45,10 @@ XF86AudioMicMute
 
 # Backlight control
 XF86MonBrightnessUp
-	bash -c "~/.config/sxhkd/brightness.sh +"
+	bash -c "~/.config/sxhkd/brightness.sh +" && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
 XF86MonBrightnessDown
-	bash -c "~/.config/sxhkd/brightness.sh -"
+	bash -c "~/.config/sxhkd/brightness.sh -" && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
 # Bindings 
 super + p
