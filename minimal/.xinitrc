@@ -15,5 +15,5 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
 # Run WM
 while true; do
-	dbus-run-session dwm
+	dwm
 done
