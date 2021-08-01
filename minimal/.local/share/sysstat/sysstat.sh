@@ -11,6 +11,11 @@ getIP(){
 	echo $IP
 }
 
+getPower(){
+	local power=$($WORK_DIR/power.sh)
+	echo "$power"
+}
+
 getVol(){
 	local VOL=$(pamixer --get-volume)
 	echo "$VOL%"
@@ -31,5 +36,6 @@ IP_ADDRESS=$(getIP)
 DATE=$(getDate)
 TIME=$(getTime)
 VOLUME=$(getVol)
+POWER=$(getPower)
 
-echo "  $IP_ADDRESS   $VOLUME | $DATE | $TIME " > $OUTPUT_FILE
+echo "  $IP_ADDRESS   $VOLUME | $POWER% | $DATE | $TIME " > $OUTPUT_FILE
