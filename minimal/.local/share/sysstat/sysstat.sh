@@ -27,8 +27,8 @@ getBrightness(){
 }
 
 getVol(){
-	local VOL=$(pamixer --get-volume)
-	echo "$VOL%"
+	local VOL=$($WORK_DIR/sound.sh)
+	echo "$VOL"
 }
 
 getDate(){
@@ -50,4 +50,4 @@ POWER=$(getPower)
 BRIGHTNESS=$(getBrightness)
 SONG=$(getSong)
 
-echo "$SONG |  $IP_ADDRESS  $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE
+echo "$SONG |  $IP_ADDRESS $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE
