@@ -12,7 +12,7 @@ hwclock --systohc
 # Create and setup user.
 echo "Please specify your user name:"
 read user
-useradd -m -s /usr/bin/fish -g users -G wheel,power,storage,optical,input,floppy $user
+useradd -m -s /usr/bin/fish -g users -G wheel,power,video,storage,optical,input,floppy $user
 
 # Set the password for user and root
 echo "Set the password for user:"
