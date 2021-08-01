@@ -50,4 +50,4 @@ POWER=$(getPower)
 BRIGHTNESS=$(getBrightness)
 SONG=$(getSong)
 
-echo "  $IP_ADDRESS $SONG |  $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE
+echo "$SONG |  $IP_ADDRESS  $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE
