@@ -4,7 +4,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Startup
 lxsession &
 setxkbmap pl &
-udiskie -A &
+udiskie -ANt &
 nitrogen --restore &
 picom --config ~/.config/picom/picom.conf &
 xrdb ~/.Xresources &
