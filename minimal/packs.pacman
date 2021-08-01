@@ -1,4 +1,6 @@
 alacritty
+android-tools
+android-udev
 arandr
 arc-gtk-theme
 arc-icon-theme
@@ -24,6 +26,8 @@ dotnet-runtime
 dotnet-sdk
 dotnet-targeting-pack
 efibootmgr
+exfatprogs
+f2fs-tools
 fakeroot
 file
 findutils
@@ -63,6 +67,7 @@ m4
 maim
 make
 mc
+mono
 mpv
 neofetch
 neovim
@@ -71,6 +76,7 @@ nitrogen
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+ntfs-3g
 obs-studio
 openssh
 pacman
@@ -92,6 +98,7 @@ sakura
 screenkey
 sed
 sfml
+sshfs
 steam
 sudo
 sxhkd
