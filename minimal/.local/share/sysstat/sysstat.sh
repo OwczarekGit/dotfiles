@@ -16,6 +16,11 @@ getPower(){
 	echo "$power"
 }
 
+getSong(){
+	local song=$($WORK_DIR/song.sh)
+	echo "$song"
+}
+
 getBrightness(){
 	local brightness=$($WORK_DIR/backlight.sh)
 	echo "$brightness"
@@ -43,5 +48,6 @@ TIME=$(getTime)
 VOLUME=$(getVol)
 POWER=$(getPower)
 BRIGHTNESS=$(getBrightness)
+SONG=$(getSong)
 
-echo "  $IP_ADDRESS   $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE
+echo "  $IP_ADDRESS $SONG |  $VOLUME | $POWER% | $BRIGHTNESS% | $DATE | $TIME " > $OUTPUT_FILE
