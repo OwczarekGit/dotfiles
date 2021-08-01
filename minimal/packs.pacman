@@ -1,4 +1,5 @@
 alacritty
+alsa-utils
 android-tools
 android-udev
 arandr
@@ -106,6 +107,7 @@ sakura
 screenkey
 sed
 sfml
+spotify-adblock
 squashfuse
 sshfs
 steam
