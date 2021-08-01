@@ -12,10 +12,10 @@ ctrl + shift + Print
 	bash -c 'maim -s -u -q -m 10 | xclip -selection clipboard -t image/png'
 
 # Screen locking & Power options
-super + Pause
+super + Home
 	bash -c '$HOME/.local/share/syslock/syslock.sh'
 
-super + ctrl + Pause
+super + ctrl + Home
 	bash -c '$HOME/.local/share/syslock/syslock.sh && systemctl suspend'
 
 super + ctrl + alt + End
@@ -28,8 +28,20 @@ super + ctrl + alt + shift + End
 super + alt + Up
 	pactl set-sink-volume @DEFAULT_SINK@ +3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+
 super + alt + Down
 	pactl set-sink-volume @DEFAULT_SINK@ -3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+
+XF86AudioMicMute
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
 # Bindings 
 super + p
