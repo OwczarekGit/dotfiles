@@ -43,6 +43,13 @@ XF86AudioMute
 XF86AudioMicMute
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle && bash -c "~/.local/share/sysstat/update_sysstat.sh"
 
+# Backlight control
+XF86MonBrightnessUp
+	bash -c "~/.config/sxhkd/brightness.sh +"
+
+XF86MonBrightnessDown
+	bash -c "~/.config/sxhkd/brightness.sh -"
+
 # Bindings 
 super + p
 	arandr
