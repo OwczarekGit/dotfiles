@@ -34,6 +34,7 @@ findutils
 firefox
 fish
 flex
+fuseiso
 fzf
 galculator
 gawk
@@ -70,6 +71,7 @@ make
 mc
 mono
 mpv
+mtpfs
 neofetch
 neovim
 networkmanager
@@ -80,6 +82,7 @@ noto-fonts-emoji
 ntfs-3g
 obs-studio
 openssh
+p7zip
 pacman
 pamixer
 paru-bin
@@ -95,16 +98,19 @@ pipewire-pulse
 pkgconf
 qbittorrent
 qtile
+rofi
 sakura
 screenkey
 sed
 sfml
+squashfuse
 sshfs
 steam
 sudo
 sxhkd
 sxiv
 texinfo
+thermald
 tldr
 tlp
 ttf-font-awesome
@@ -114,6 +120,7 @@ udiskie
 udisks2
 wget
 which
+xarchiver
 xclip
 xdg-user-dirs
 xf86-input-evdev
@@ -167,3 +174,4 @@ xorg-xwininfo
 xorg-xwud
 xterm
 youtube-dl
+zip
