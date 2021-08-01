@@ -13,7 +13,7 @@ do
 	count=$(($count + 1))
 done
 
-CHARGE=$(echo "scale=2; ($total/(100*$count)*100)" | bc | sed "s/.[0-9][0-9]//g")
+CHARGE=$(echo "scale=2; ($total/(100*$count)*100)" | bc | sed "s/\..*$//g")
 
 CHARGING=$(cat "$POWER_PATH/AC/online")
 prefix=""
