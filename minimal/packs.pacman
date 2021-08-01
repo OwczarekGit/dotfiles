@@ -96,6 +96,7 @@ pipewire-jack
 pipewire-jack-dropin
 pipewire-pulse
 pkgconf
+playerctl
 qbittorrent
 qtile
 rofi
