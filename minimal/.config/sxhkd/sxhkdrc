@@ -65,3 +65,6 @@ super + ctrl + c
 
 super + ctrl + w
 	bash -c "$HOME/.local/share/wifimenu.sh"
+
+super + alt + space
+	rofi -show drun
