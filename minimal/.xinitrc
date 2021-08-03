@@ -10,7 +10,7 @@ picom --config ~/.config/picom/picom.conf &
 xrdb ~/.Xresources &
 clipmenud &
 kdeconnect-indicator &
-sxhkd -c ~/.config/sxhkd/sxhkdrc &
+SHELL=/bin/bash sxhkd -c ~/.config/sxhkd/sxhkdrc &
 ~/.local/share/sysstat/update_sysstat_loop.sh &
 
 # Run WM
