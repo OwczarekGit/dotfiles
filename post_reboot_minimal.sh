@@ -10,7 +10,7 @@ cd paru-bin && makepkg -si && cd ..
 sudo sed -i 's/#BottomUp/BottomUp/g' "/etc/paru.conf"
 
 paru -Syyu
-paru -S $(cat "minimal/packs.pacman") --noconfirm
+paru -S $(cat "minimal/packs.pacman") --noconfirm --needed
 
 # Copying config files
 xdg-user-dirs-update
