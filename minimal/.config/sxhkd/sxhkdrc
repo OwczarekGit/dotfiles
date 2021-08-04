@@ -73,6 +73,9 @@ super + c
 super + n
 	pcmanfm
 
+super + b
+	firefox
+
 super + ctrl + c
 	clipmenu
 
