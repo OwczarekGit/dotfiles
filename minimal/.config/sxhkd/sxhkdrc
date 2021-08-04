@@ -23,16 +23,16 @@ super + shift + BackSpace
 
 # Sound stuff
 super + alt + Up
-	pactl set-sink-volume @DEFAULT_SINK@ +3% && kill -10 $(pgrep dwmbard)
+	bash -c "~/.config/sxhkd/sound.sh +" && kill -10 $(pgrep dwmbard)
 
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +3% && kill -10 $(pgrep dwmbard)
+	bash -c "~/.config/sxhkd/sound.sh +" && kill -10 $(pgrep dwmbard)
 
 super + alt + Down
-	pactl set-sink-volume @DEFAULT_SINK@ -3% && kill -10 $(pgrep dwmbard)
+	bash -c "~/.config/sxhkd/sound.sh -" && kill -10 $(pgrep dwmbard)
 
 XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -3% && kill -10 $(pgrep dwmbard)
+	bash -c "~/.config/sxhkd/sound.sh -" && kill -10 $(pgrep dwmbard)
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle && kill -10 $(pgrep dwmbard)
