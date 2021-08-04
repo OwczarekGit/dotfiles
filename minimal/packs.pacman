@@ -27,6 +27,7 @@ dmenu
 dotnet-runtime
 dotnet-sdk
 dotnet-targeting-pack
+dunst
 efibootmgr
 exfatprogs
 f2fs-tools
@@ -137,6 +138,7 @@ xclip
 xdg-user-dirs
 xf86-input-evdev
 xf86-input-libinput
+xfce4-taskmanager
 xorg-bdftopcf
 xorg-docs
 xorg-font-util
