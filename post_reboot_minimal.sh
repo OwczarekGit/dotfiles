@@ -12,6 +12,10 @@ sudo sed -i 's/#BottomUp/BottomUp/g' "/etc/paru.conf"
 paru -Syyu
 paru -S $(cat "minimal/packs.pacman") --noconfirm --needed
 
+# Install dwmBard
+git clone "https://github.com/OwczarekGit/dwmBard"
+cd dwmBard && ./install.sh && cd ..
+
 # Copying config files
 xdg-user-dirs-update
 cd minimal
