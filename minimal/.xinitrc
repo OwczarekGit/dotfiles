@@ -2,6 +2,8 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Startup
+xset -dpms &
+xset s 0 &
 lxsession &
 setxkbmap pl &
 udiskie -ANt &
