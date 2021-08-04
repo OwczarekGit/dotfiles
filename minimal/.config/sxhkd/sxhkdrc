@@ -23,45 +23,45 @@ super + shift + BackSpace
 
 # Sound stuff
 super + alt + Up
-	pactl set-sink-volume @DEFAULT_SINK@ +3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	pactl set-sink-volume @DEFAULT_SINK@ +3% && kill -10 $(pgrep dwmbard)
 
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	pactl set-sink-volume @DEFAULT_SINK@ +3% && kill -10 $(pgrep dwmbard)
 
 super + alt + Down
-	pactl set-sink-volume @DEFAULT_SINK@ -3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	pactl set-sink-volume @DEFAULT_SINK@ -3% && kill -10 $(pgrep dwmbard)
 
 XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -3% && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	pactl set-sink-volume @DEFAULT_SINK@ -3% && kill -10 $(pgrep dwmbard)
 
 XF86AudioMute
-	pactl set-sink-mute @DEFAULT_SINK@ toggle && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && kill -10 $(pgrep dwmbard)
 
 XF86AudioMicMute
-	pactl set-source-mute @DEFAULT_SOURCE@ toggle && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle && kill -10 $(pgrep dwmbard)
 
 # Music Control
 super + grave
-	playerctl play-pause
+	playerctl play-pause && kill -10 $(pgrep dwmbard)
 
 XF86AudioPause
-	playerctl pause
+	playerctl pause && kill -10 $(pgrep dwmbard)
 
 XF86AudioPlay
-	playerctl play
+	playerctl play && kill -10 $(pgrep dwmbard)
 	
 super + alt + Left
-	playerctl previous
+	playerctl previous && kill -10 $(pgrep dwmbard)
 
 super + alt + Right
-	playerctl next
+	playerctl next && kill -10 $(pgrep dwmbard)
 
 # Backlight control
 XF86MonBrightnessUp
-	bash -c "~/.config/sxhkd/brightness.sh +" && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	bash -c "~/.config/sxhkd/brightness.sh +" && kill -10 $(pgrep dwmbard)
 
 XF86MonBrightnessDown
-	bash -c "~/.config/sxhkd/brightness.sh -" && bash -c "~/.local/share/sysstat/update_sysstat.sh"
+	bash -c "~/.config/sxhkd/brightness.sh -" && kill -10 $(pgrep dwmbard)
 
 # Bindings 
 super + p

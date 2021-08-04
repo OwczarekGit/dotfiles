@@ -11,7 +11,8 @@ xrdb ~/.Xresources &
 clipmenud &
 kdeconnect-indicator &
 SHELL=/bin/bash sxhkd -c ~/.config/sxhkd/sxhkdrc &
-~/.local/share/sysstat/update_sysstat_loop.sh &
+#~/.local/share/sysstat/update_sysstat_loop.sh &
+SHELL=/bin/bash ~/.local/share/dwmBard/dwmbard &
 
 # Run WM
 while true; do
