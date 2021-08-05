@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #printf "Cancel\nLock\nSuspend\nShutdown\nReboot" | dmenu -p "Option:" -l 10
-SELECTION=$(printf "Cancel\nLock\nSuspend\nShutdown\nReboot" | rofi -show -dmenu -i -p "Option" -l 5)
+SELECTION=$(printf "Cancel\nLock\nSuspend\nShutdown\nReboot" | rofi -show -dmenu -font "Ubuntu 12" -i -p "Option" -l 5)
 
 case $SELECTION in
 
