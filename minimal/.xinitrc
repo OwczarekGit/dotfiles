@@ -8,15 +8,12 @@ export QT_STYLE_OVERRIDE=kvantum
 xset -dpms &
 xset s 0 &
 lxsession &
-setxkbmap pl &
-udiskie -ANt &
-dunst &
-nitrogen --restore &
-picom --config ~/.config/picom/picom.conf &
 xrdb ~/.Xresources &
-clipmenud &
-kdeconnect-indicator &
-SHELL=/bin/bash sxhkd -c ~/.config/sxhkd/sxhkdrc &
+
+# There is some problems with rofi being run form sxhkd 
+# when sxhkd was started in dwmBard (spotify-adblock fails to open)
+# will try to fix it.
+SHELL=/bin/bash sxhkd &
 SHELL=/bin/bash ~/.local/share/dwmBard/dwmbard &
 
 # Run WM
