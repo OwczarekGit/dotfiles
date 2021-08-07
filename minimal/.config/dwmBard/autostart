@@ -1,9 +1,9 @@
+lxsession; true
+setxkbmap pl; false
+udiskie -ANt; true; udiskie
+dunst; true
 nitrogen --restore; false
 picom; true
-clipmenud; true;
+clipmenud; true
 kdeconnect-indicator; true
-xinput --set-prop 13 'libinput Accel Speed' -0.75; false
-dunst; true
-udiskie -ANt; true; udiskie
-setxkbmap; false
-
+sxhkd; true
