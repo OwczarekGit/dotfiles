@@ -21,7 +21,7 @@ fi
 if [ $1 == "-" ]; then
 	tmp=$(( $NOW - $STEP ))
 	if [ $tmp -lt 0 ]; then
-		NOW="0"
+		NOW="1"
 	else
 		NOW=$(( $NOW - $STEP ))
 	fi
