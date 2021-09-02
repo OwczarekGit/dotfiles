@@ -15,7 +15,7 @@ paru -S $(cat "gnome/packs.pacman") --noconfirm --needed
 # Copying config files
 xdg-user-dirs-update
 cd gnome
-dconf load < settings.dconf
+dconf load / < settings.dconf
 #cp -r * ~
 
 # Done 
