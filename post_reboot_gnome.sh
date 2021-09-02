@@ -17,8 +17,8 @@ xdg-user-dirs-update
 cd gnome
 dconf load / < settings.dconf
 #cp -r * ~
+sudo systemctl enable gdm
 
 # Done 
-echo "Done! Now you can setup your WM of choice."
-echo "If you wish to install my DWM run: 'git clone \"https://github.com/OwczarekGit/dwm.git\"'"
+echo "Done! The GDM login manager should appear after reboot."
 
