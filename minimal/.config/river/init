@@ -24,12 +24,19 @@ riverctl map normal Super F toggle-fullscreen
 riverctl map normal Super Return spawn alacritty
 riverctl map normal Super B spawn firefox
 riverctl map normal Super D spawn 'wofi --insensitive --show drun'
+riverctl map normal Super+Shift W spawn ~/Desktop/wall.sh
+riverctl map normal Super+Control+Alt L spawn 'swaylock -c "#000000"'
 
 riverctl map normal None XF86AudioRaiseVolume spawn 'pamixer -i 3'
 riverctl map normal None XF86AudioLowerVolume spawn 'pamixer -d 3'
 riverctl map locked None XF86AudioRaiseVolume spawn 'pamixer -i 3'
 riverctl map locked None XF86AudioLowerVolume spawn 'pamixer -d 3'
 riverctl map normal None XF86AudioMute spawn 'pamixer --toggle-mute'
+
+riverctl map normal None XF86AudioMedia spawn 'playerctl play-pause'
+riverctl map normal None XF86AudioPlay  spawn 'playerctl play-pause'
+riverctl map normal None XF86AudioNext  spawn 'playerctl next'
+riverctl map normal None XF86AudioPrev  spawn 'playerctl previous'
 
 riverctl map-pointer normal Super BTN_LEFT move-view
 riverctl map-pointer normal Super BTN_RIGHT resize-view
