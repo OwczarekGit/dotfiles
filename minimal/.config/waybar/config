@@ -1,0 +1,21 @@
+{
+    "height": 24,
+    "spacing": 2,
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "clock", "tray"],
+
+    "wlr/workspaces": {
+        "active-only": false,
+        "disable-scroll": false,
+
+    },
+    "tray": {
+	"icon-size": 18,
+        "spacing": 6
+    },
+    "clock": {
+        "format": "{:%d.%m.%Y | %H:%M}"
+    }
+
+}

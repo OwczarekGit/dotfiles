@@ -1,0 +1,28 @@
+*{
+	background-color: transparent;
+	font-family: UbuntuMono, sans-serif;
+	color: #fff;
+	font-weight: 600;
+}
+
+.modules-right{
+	margin-right: 8px;
+}
+
+.modules-left{
+	margin-left: 8px;
+}
+
+#waybar{
+	background-color: #000000;
+	opacity: 0.8;
+	border: 0;
+	border-radius: 0 0 12px 12px;
+}
+
+#clock,
+#tray,
+#pulseaudio{
+	padding: 0 6px;
+}
+
