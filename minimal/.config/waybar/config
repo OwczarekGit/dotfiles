@@ -1,21 +1,48 @@
 {
-    "height": 24,
-    "spacing": 2,
-    "modules-left": ["wlr/workspaces"],
-    "modules-center": [],
-    "modules-right": ["pulseaudio", "clock", "tray"],
-
-    "wlr/workspaces": {
-        "active-only": false,
-        "disable-scroll": false,
-
-    },
-    "tray": {
-	"icon-size": 18,
-        "spacing": 6
-    },
-    "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
-    }
-
+	"layer": "top",
+	"height": 24,
+	"modules-left" : ["wlr/workspaces"],
+	"modules-center" : ["hyprland/window"],
+	"modules-right" : [
+		"custom/weather",
+		"pulseaudio",
+		"network",
+		"clock",
+		"tray"
+	],
+	"wlr/workspaces": {
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"persistent_workspaces": {
+			"1": ["HDMI-A-1"],
+			"2": ["HDMI-A-1"],
+			"3": ["HDMI-A-1"],
+			"4": ["HDMI-A-1"],
+			"5": ["HDMI-A-1"],
+			"6": ["HDMI-A-1"],
+			"7": ["HDMI-A-1"],
+			"8": ["HDMI-A-1"]
+		}
+	},
+	"pulseaudio": {
+		"format": "  {volume}%",
+		"format-muted": "󰸈  MUTE",
+		"on-click": "pavucontrol",
+		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	},
+	"custom/weather": {
+		"exec": "~/.config/hypr/weather.sh",
+		"interval": 300
+	},
+	"clock": {
+		"format": "{:%d.%m.%Y | %H:%M}"
+	},
+	"network": {
+		"format": "{ipaddr}"
+	},
+	"tray": {
+		"spacing": 2,
+		"icon-size": 16
+	}
 }

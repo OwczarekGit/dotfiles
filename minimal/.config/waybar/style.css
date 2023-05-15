@@ -1,28 +1,39 @@
-*{
+* {
 	background-color: transparent;
-	font-family: UbuntuMono, sans-serif;
 	color: #fff;
-	font-weight: 600;
+	font-family: Ubuntu, sans-serif;
+	font-size: 12px;
 }
 
-.modules-right{
-	margin-right: 8px;
+#workspaces button {
+	border-radius: 0;
+	padding: 0px;
+	border: none;
+	background-color: transparent;
 }
 
-.modules-left{
-	margin-left: 8px;
+#workspaces button.active * {
+	background-color: rgba(66,66,66,1);
 }
 
-#waybar{
-	background-color: #000000;
-	opacity: 0.8;
-	border: 0;
-	border-radius: 0 0 12px 12px;
+#workspaces button.urgent * {
+	background-color: orange;
 }
 
 #clock,
-#tray,
-#pulseaudio{
-	padding: 0 6px;
+#pulseaudio,
+#network,
+#custom-weather,
+#tray {
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
+#tray window {
+	background-color: #333;
+	border-radius: 6px;
+}
+
+#tray window *:hover {
+	background-color: #444;
+}

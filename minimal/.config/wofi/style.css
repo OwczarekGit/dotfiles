@@ -1,27 +1,31 @@
-window{
-	opacity: 0.9;
-	background-color: #000000;
-	color: #ffffff;
+window {
+	color: #fff;
 	border-radius: 8px;
+	background-color: #222;
 }
 
-#input{
-	background-color: transparent;
-	color: #ff6600;
+#outer-box {
+	padding: 8px;
+}
+
+#input {
+	background-color: #333;
+	border: 0;
+	padding: 4px;
+	color: #fff;
+	margin-bottom: 8px;
+}
+
+#inner-box {
 	border: 0;
 }
 
-#outer-box{
-
+#entry {
 }
 
-#inner-box{
-	padding: 2px 8px;
-}
-
-#selected{
-	background-color: #222222;
-}
-
-#scroll{
+#entry:selected {
+	background-color: #333;
+	border: 0;
+	outline: 0;
+	font-weight: bold;
 }
