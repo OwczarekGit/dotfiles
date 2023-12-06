@@ -1,39 +1,58 @@
-* {
+@import url("theme.css");
+
+window {
 	background-color: transparent;
-	color: #fff;
-	font-family: Ubuntu, sans-serif;
-	font-size: 12px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+#workspaces {
+	margin: 3px;
+	border-radius: 12px;
+	padding: 3px 6px;
+	background-color: @background;
 }
 
 #workspaces button {
-	border-radius: 0;
-	padding: 0px;
+	color: @foreground;
 	border: none;
-	background-color: transparent;
 }
 
-#workspaces button.active * {
-	background-color: rgba(66,66,66,1);
+#workspaces button.active {
+	background: @yellow;
+	color: @black;
 }
 
-#workspaces button.urgent * {
-	background-color: orange;
+#window {
+	margin: 3px;
+	border-radius: 12px;
+	padding: 3px 6px;
+	background-color: @background;
+	color: @foreground;
 }
 
 #clock,
 #pulseaudio,
-#network,
-#custom-weather,
-#tray {
-	margin-left: 4px;
-	margin-right: 4px;
+#tray,
+#custom-date,
+#custom-weather {
+	margin: 3px;
+	border-radius: 12px;
+	padding: 3px 6px;
+	background-color: @background;
+	color: @foreground;
 }
 
-#tray window {
-	background-color: #333;
-	border-radius: 6px;
-}
-
-#tray window *:hover {
-	background-color: #444;
+#custom-media {
+	margin: 3px;
+	border-radius: 12px;
+	padding: 3px 6px;
+	background-color: @background;
+	color: @foreground;
 }

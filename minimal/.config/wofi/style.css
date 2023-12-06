@@ -1,31 +1,26 @@
-window {
-	color: #fff;
-	border-radius: 8px;
-	background-color: #222;
-}
+@import url(".config/wofi/theme.css");
 
-#outer-box {
-	padding: 8px;
+window {
+	color: @foreground;
+	margin: 5px;
+	background-color: @background;
+	border: 6px solid @green;
+	border-radius: 12px;
+	font-size: 18px;
 }
 
 #input {
-	background-color: #333;
-	border: 0;
-	padding: 4px;
-	color: #fff;
-	margin-bottom: 8px;
-}
-
-#inner-box {
-	border: 0;
+	background-color: @green;
+	padding: 6px;
+	border: none;
+	color: @foreground;
 }
 
 #entry {
+	background-color: @background;
+	margin: 0 6px;
 }
 
 #entry:selected {
-	background-color: #333;
-	border: 0;
-	outline: 0;
-	font-weight: bold;
+	background-color: @red;
 }

@@ -1,48 +1,51 @@
 {
 	"layer": "top",
-	"height": 24,
-	"modules-left" : ["wlr/workspaces"],
+	"modules-left" : ["hyprland/workspaces"],
 	"modules-center" : ["hyprland/window"],
 	"modules-right" : [
+		"custom/media",
 		"custom/weather",
+		"tray",
 		"pulseaudio",
-		"network",
 		"clock",
-		"tray"
+		"custom/date"
 	],
-	"wlr/workspaces": {
-		"on-click": "activate",
+
+	"hyprland/workspaces": {
 		"on-scroll-up": "hyprctl dispatch workspace e+1",
 		"on-scroll-down": "hyprctl dispatch workspace e-1",
-		"persistent_workspaces": {
-			"1": ["HDMI-A-1"],
-			"2": ["HDMI-A-1"],
-			"3": ["HDMI-A-1"],
-			"4": ["HDMI-A-1"],
-			"5": ["HDMI-A-1"],
-			"6": ["HDMI-A-1"],
-			"7": ["HDMI-A-1"],
-			"8": ["HDMI-A-1"]
-		}
 	},
-	"pulseaudio": {
-		"format": "  {volume}%",
-		"format-muted": "󰸈  MUTE",
-		"on-click": "pavucontrol",
-		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-	},
-	"custom/weather": {
-		"exec": "~/.config/hypr/weather.sh",
-		"interval": 300
-	},
+
 	"clock": {
-		"format": "{:%d.%m.%Y | %H:%M}"
+		"timezone": "Europe/Warsaw",
+		"format": "󰥔   {:%H:%M}"
 	},
-	"network": {
-		"format": "{ipaddr}"
+
+	"custom/date": {
+		"exec": "date +'󰃭   %d.%m.%Y'",
+		"interval": 1
 	},
+
+	"custom/weather": {
+		"exec": "curl -s 'wttr.in?format=1' | sed 's/+//'",
+		"interval": 600,
+	},
+
+	"pulseaudio": {
+		"format": "   {volume}%",
+		"on-click": "exec pavucontrol"
+	},
+
 	"tray": {
-		"spacing": 2,
-		"icon-size": 16
+		"icon-size": 16,
+		"spacing": 8,
+	},
+
+	"custom/media": {
+		"format": "   {}",
+		"interval": 1,
+		"escape": true,
+		"exec": "playerctl metadata --format '{{artist}} - {{title}}'"
 	}
 }
+
