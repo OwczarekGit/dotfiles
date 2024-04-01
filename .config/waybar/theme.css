@@ -1,0 +1,19 @@
+/* Remember to import this file in your style.css */
+@define-color background #303446;
+@define-color foreground #C6D0F5;
+@define-color black #232634;
+@define-color red #E78284;
+@define-color green #A6D189;
+@define-color yellow #EF9F76;
+@define-color blue #8CAAEE;
+@define-color magenta #CA9EE6;
+@define-color cyan #85C1DC;
+@define-color white #B5BFE2;
+@define-color bblack #838BA7;
+@define-color bred #EA999C;
+@define-color bgreen #81C8BE;
+@define-color byellow #E5C890;
+@define-color bblue #85C1DC;
+@define-color bmagenta #F4B8E4;
+@define-color bcyan #99D1DB;
+@define-color bwhite #C6D0F5;

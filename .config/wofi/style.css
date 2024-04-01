@@ -1,0 +1,31 @@
+@import url(".config/wofi/theme.css");
+
+window {
+	background-color: transparent;
+}
+
+#outer-box {
+	color: @foreground;
+	background-color: @background;
+	border: 2px solid @yellow;
+	border-radius: 4px;
+	font-size: 18px;
+}
+
+#input {
+	background-color: @background;
+	padding: 6px;
+	border: none;
+	border-radius: 0;
+	color: @foreground;
+	font-weight: bold;
+}
+
+#entry {
+	background-color: @background;
+	margin: 0 6px;
+}
+
+#entry:selected {
+	background-color: @red;
+}

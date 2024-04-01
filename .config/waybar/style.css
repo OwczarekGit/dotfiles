@@ -1,0 +1,57 @@
+@import url("theme.css");
+
+window {
+	background-color: @background;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+#workspaces {
+	margin: 3px;
+	border-radius: 12px;
+	background-color: @background;
+}
+
+#workspaces button {
+	color: @foreground;
+	border-radius: 50%;
+	border: none;
+}
+
+#workspaces button.active {
+	background: @byellow;
+	color: @black;
+}
+
+#window {
+	margin: 3px;
+	border-radius: 12px;
+	background-color: @background;
+	color: @foreground;
+}
+
+#clock,
+#pulseaudio,
+#tray,
+#battery,
+#custom-date,
+#custom-weather {
+	margin: 5px;
+	border-radius: 12px;
+	background-color: @background;
+	color: @foreground;
+}
+
+#custom-media {
+	margin: 3px;
+	border-radius: 12px;
+	padding: 3px 6px;
+	background-color: @background;
+	color: @foreground;
+}

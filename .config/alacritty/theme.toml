@@ -1,0 +1,24 @@
+# Remember to import this file in your alacritty.toml
+[colors.primary]
+background = '#303446'
+foreground = '#C6D0F5'
+
+[colors.normal]
+black = '#232634'
+red = '#E78284'
+green = '#A6D189'
+yellow = '#EF9F76'
+blue = '#8CAAEE'
+magenta = '#CA9EE6'
+cyan = '#85C1DC'
+white = '#B5BFE2'
+
+[colors.bright]
+black = '#838BA7'
+red = '#EA999C'
+green = '#81C8BE'
+yellow = '#E5C890'
+blue = '#85C1DC'
+magenta = '#F4B8E4'
+cyan = '#99D1DB'
+white = '#C6D0F5'

@@ -1,0 +1,22 @@
+name = "Catppuccin Frappe"
+variant = "Dark"
+
+[palette]
+bg = 808732415
+fg = 3335583231
+black = 589706495
+red = 3884090623
+green = 2798750207
+yellow = 4020205311
+blue = 2360012543
+magenta = 3399411455
+cyan = 2244074751
+white = 3049251583
+bblack = 2206967807
+bred = 3935935743
+bgreen = 2177416959
+byellow = 3855126783
+bblue = 2244074751
+bmagenta = 4105757951
+bcyan = 2580667391
+bwhite = 3335583231

@@ -1,0 +1,62 @@
+{
+	"layer": "top",
+	"modules-left" : [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center" : [],
+	"modules-right" : [
+		"custom/media",
+		"custom/weather",
+		"tray",
+		"pulseaudio",
+		"clock",
+		"custom/date",
+		"battery"
+	],
+
+	"hyprland/workspaces": {
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+	},
+
+	"battery": {
+		"bat": "BAT0",
+		"format": "󰁹 {capacity}%"
+	},
+
+	"clock": {
+		"timezone": "Europe/Warsaw",
+		"format": "󰥔   {:%H:%M}"
+	},
+
+	"custom/date": {
+		"exec": "date +'󰃭   %d.%m.%Y'",
+		"interval": 1
+	},
+
+	"custom/weather": {
+		"exec": "curl -s 'wttr.in?format=1' | sed 's/+//'",
+		"interval": 600,
+	},
+
+	"pulseaudio": {
+		"format": "   {volume}%",
+		"on-click": "exec pavucontrol"
+	},
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 8,
+	},
+
+	"custom/media": {
+		"format": "   {}",
+		"interval": 1,
+		"escape": true,
+		"exec": "playerctl metadata --format '{{artist}} - {{title}}'",
+		"on-click": "playerctl play-pause",
+		"on-click-right": "playerctl next",
+	}
+}
+

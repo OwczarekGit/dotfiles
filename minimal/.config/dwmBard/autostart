@@ -1,9 +1,0 @@
-lxsession; true
-setxkbmap pl; false
-udiskie -ANt; true; udiskie
-dunst; true
-nitrogen --restore; false
-picom; true
-clipmenud; true
-kdeconnect-indicator; true
-sxhkd; true
