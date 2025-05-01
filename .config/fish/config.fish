@@ -13,5 +13,8 @@ if status is-interactive
     alias 'ls' 'exa'
     alias 'la' 'exa -lah'
     alias 'll' 'exa -llh'
+
+    fzf --fish | source
+
     fish_vi_key_bindings
 end
