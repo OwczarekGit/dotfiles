@@ -1,11 +1,13 @@
 #!/usr/bin/env nu
 
+const OPTION: string = "cursor:zoom_factor"; 
+
 def main [factor: float] {
-  hyprctl getoption cursor:zoom_factor -j
+  hyprctl getoption $OPTION -j
     | from json
     | get float
-    | [ ($in - $factor), 1.0]
+    | [ ($in * (1.0 + $factor)), 1.0]
     | math max
-    | hyprctl keyword cursor:zoom_factor $in
+    | hyprctl keyword $OPTION $in
 }
 
