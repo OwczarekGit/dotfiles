@@ -4,10 +4,43 @@
 		"hyprland/workspaces",
 		"hyprland/window"
 	],
-	"modules-center": [],
-	"modules-right": [
-		"tray",
-		"wireplumber",
+	"modules-center": [
 		"clock"
-	]
+	],
+	"modules-right": [
+		"bluetooth",
+		"wireplumber",
+		"tray"
+	],
+
+	"hyprland/workspaces": {
+		// FIXME: Custom script needed.
+		//"on-scroll-up": "hyprctl dispatch workspace e+1",
+		//"on-scroll-up": "hyprctl dispatch workspace e-1"
+	},
+
+	"clock": {
+		"tooltip-format": "   {:%d.%m.%Y}"
+	},
+
+	"tray": {
+		"icon-size": 18,
+		"spacing": 4
+	},
+
+	"bluetooth": {
+		"format-connected": "󰂱",
+		"format-on": "󰂯",
+		"format-off": "󰂲",
+		"format-disabled": "󰂲",
+		"on-click": "blueman-manager"
+	},
+
+	"wireplumber": {
+		"format": "   {volume}%",
+		"format-muted": "   {volume}%",
+		"on-click": "pavucontrol",
+		"on-click-middle": "wpctl set-mute @DEFAULT_SINK@ toggle",
+		"max-volume": 150.0
+	}
 }

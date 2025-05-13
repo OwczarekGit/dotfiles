@@ -1,0 +1,52 @@
+window {
+	background-color: #1e1e2e;
+	font-family: "Adwaita Sans";
+}
+
+.horizontal {
+	color: #cdd6f4;
+}
+
+.modules-right .module {
+	padding: 0 6px;
+}
+
+#bluetooth {
+	font-size: 18px;
+}
+
+#workspaces button {
+	border: none;
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	margin: 2px;
+
+	transition:
+		background-color 0.2s ease-in-out 0s,
+		color 0.2s ease-in-out 0s;
+}
+
+#workspaces button:hover {
+	background: none;
+	border: none;
+	transition: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.active {
+	background-color: #f9e2af;
+}
+
+#workspaces button.active label {
+	color: #1e1e2e;
+	font-weight: bold;
+}
+
+#workspaces button.urgent{
+	background-color: #f38ba8;
+}
+
+#workspaces button.urgent label {
+	color: #1e1e2e;
+}
