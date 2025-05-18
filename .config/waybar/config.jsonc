@@ -8,7 +8,10 @@
 		"clock"
 	],
 	"modules-right": [
+		"mpris",
 		"bluetooth",
+		"battery",
+		"backlight",
 		"wireplumber",
 		"tray"
 	],
@@ -62,12 +65,39 @@
 		"spacing": 4
 	},
 
+	"mpris": {
+		"format": "{player_icon}  {title}",
+		"format": "{status_icon}  {title}",
+		"player-icons": {
+			"default": ""
+		},
+		"status-icons": {
+			"playing": "",
+			"paused": ""
+		},
+		"ignored-players": ["firefox"]
+	},
+
 	"bluetooth": {
 		"format-connected": "󰂱",
 		"format-on": "󰂯",
 		"format-off": "󰂲",
 		"format-disabled": "󰂲",
 		"on-click": "blueman-manager"
+	},
+
+	"battery": {
+		"format": "{icon} {capacity}%",
+		"tooltip": "",
+		"interval": 60,
+		"format-charging": "󰚥 {capacity}%",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"scroll-step": 1,
+		"format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
 	},
 
 	"wireplumber": {
