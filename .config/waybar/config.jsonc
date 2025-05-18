@@ -9,6 +9,7 @@
 	],
 	"modules-right": [
 		"mpris",
+		"network",
 		"bluetooth",
 		"battery",
 		"backlight",
@@ -84,6 +85,17 @@
 		"format-off": "󰂲",
 		"format-disabled": "󰂲",
 		"on-click": "blueman-manager"
+	},
+
+	"network": {
+		"format": "{icon}",
+		"format-wifi": "{icon}",
+		"format-ethernet": "󰈀",
+		"format-disconnected": "󰤮",
+		"format-disabled": "󰯡",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"tooltip-format": "{essid} : {ipaddr}",
+		"on-click": "alacritty -e nmtui"
 	},
 
 	"battery": {
