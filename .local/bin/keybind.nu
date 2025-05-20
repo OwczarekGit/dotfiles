@@ -10,6 +10,9 @@ let MAP = {
   "valheim.x86_64": {
     "1": ', M,'
   }
+  "Minecraft* 1.21.1": {
+    "1": ', M,'
+  }
 };
 
 def get_window [] {
