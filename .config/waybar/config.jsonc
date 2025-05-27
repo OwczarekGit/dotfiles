@@ -9,6 +9,7 @@
 	],
 	"modules-right": [
 		"mpris",
+		"memory",
 		"network",
 		"bluetooth",
 		"battery",
@@ -85,6 +86,10 @@
 		"format-off": "󰂲",
 		"format-disabled": "󰂲",
 		"on-click": "blueman-manager"
+	},
+
+	"memory": {
+		"format": "   {percentage}%"
 	},
 
 	"network": {
