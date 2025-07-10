@@ -59,7 +59,7 @@
 	},
 
 	"clock": {
-		"tooltip-format": "   {:%d.%m.%Y}"
+		"tooltip-format": "{:%d.%m.%Y}"
 	},
 
 	"tray": {
@@ -112,7 +112,7 @@
 	},
 
 	"backlight": {
-		"format": "{icon}  {percent}%",
+		"format": "{icon} {percent}%",
 		"scroll-step": 1,
 		"format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
 	},
