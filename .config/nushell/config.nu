@@ -1,4 +1,4 @@
-use pacman.nu *
+use pacman.nu *;
 
 $env.config.show_banner = false;
 

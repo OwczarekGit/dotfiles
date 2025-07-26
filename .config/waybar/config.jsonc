@@ -2,6 +2,7 @@
 	"layer": "top",
 	"modules-left": [
 		"hyprland/workspaces",
+		"niri/workspaces",
 		"hyprland/window"
 	],
 	"modules-center": [
@@ -56,6 +57,10 @@
 			"28": "8",
 			"29": "9"
 		}
+	},
+
+	"niri/workspaces": {
+		"format": "{value}"
 	},
 
 	"clock": {
