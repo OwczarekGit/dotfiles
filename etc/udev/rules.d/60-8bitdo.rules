@@ -1,0 +1,2 @@
+# 8BitDo Ultimate 2 Dongle
+KERNEL=="hidraw*", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="6012", MODE="066" 
