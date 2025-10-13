@@ -4,7 +4,7 @@ export def main [] {
   (1..9)
     | each {|it|
       $it | reset-switch-to-app
-      $it | set-move-to-workspace
+      $it | set-switch-to-workspace
       $it | set-move-to-workspace
     }
 
