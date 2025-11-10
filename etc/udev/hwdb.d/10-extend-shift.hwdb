@@ -1,0 +1,2 @@
+evdev:*
+ KEYBOARD_KEY_70064=leftshift
