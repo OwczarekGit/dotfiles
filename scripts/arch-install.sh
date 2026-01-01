@@ -50,7 +50,7 @@ mount -o compress=zstd:15,subvol=@home $D2 $M/home
 mount $D1 $M/boot
 
 # Install base system
-pacstrap -K $M base base-devel linux linux-{headers,firmware} efibootmgr fish zellij neovim helix networkmanager git nushell btrfs-progs dosfstools intel-ucode less htop mc exfatprogs ntfs-3g fuse fuse2 fuse3 sshfs rsync man tealdeer xdg-user-dirs openssh archlinux-keyring
+pacstrap -K $M base base-devel linux linux-{headers,firmware} efibootmgr fish zellij neovim helix networkmanager git nushell btrfs-progs dosfstools intel-ucode less htop mc exfatprogs ntfs-3g fuse fuse2 fuse3 sshfs rsync man tealdeer xdg-user-dirs openssh archlinux-keyring bluez bluez-{tools,utils}
 
 # Genfstab
 genfstab -U $M > $M/etc/fstab
@@ -86,10 +86,10 @@ arch-chroot $M bash -c "echo \"initrd /initramfs-linux.img\" >> /boot/loader/ent
 arch-chroot $M bash -c "echo \"options root=$(blkid -o export $D2 | head -n2 | tail -n1) rw rootflags=subvol=@\" >> /boot/loader/entries/arch.conf"
 
 # Post install packages
-arch-chroot $M pacman -Syyu --noconfirm --needed wireplumber pipewire pipewire-{pulse,jack,alsa} cosmic vulkan-icd-loader vulkan-radeon mpv ffmpeg yt-dlp noto-fonts-{cjk,emoji} flatpak xdg-desktop-portal-gtk firefox lazygit fastfetch upower tuned tuned-ppd docker docker-compose virtualbox virtualbox-host-modules-arch
+arch-chroot $M pacman -Syyu --noconfirm --needed wireplumber pipewire pipewire-{pulse,jack,alsa} cosmic vulkan-icd-loader vulkan-radeon mpv ffmpeg yt-dlp noto-fonts-{cjk,emoji} flatpak xdg-desktop-portal-gtk firefox lazygit fastfetch upower tuned tuned-ppd docker docker-compose virtualbox virtualbox-host-modules-arch libnotify wl-clipboard
 
 # Start services
-arch-chroot $M systemctl enable sshd cosmic-greeter tuned tuned-ppd NetworkManager avahi-daemon
+arch-chroot $M systemctl enable sshd cosmic-greeter tuned tuned-ppd NetworkManager avahi-daemon bluetooth
 
 # User configuration
 arch-chroot $M useradd -m -s /usr/bin/nu -g users -G wheel,power,storage,floppy,optical,input,docker,vboxusers $USER
