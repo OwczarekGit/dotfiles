@@ -58,7 +58,18 @@ genfstab -U $M > $M/etc/fstab
 # Basic configuration
 arch-chroot $M echo -e "$PASS\n$PASS" | passwd root -s
 arch-chroot $M sed -i "s/#$EN/$EN/;s/#$PL/$PL/" /etc/locale.gen
-arch-chroot $M bash -c "echo \"LANG=$EN\" > /etc/locale.conf"
+
+arch-chroot $M bash -c "echo \"LANG=$EN\"               > /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_NUMERIC=$PL\"        >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_TIME=$PL\"           >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_MONETARY=$PL\"       >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_PAPER=$PL\"          >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_NAME=$PL\"           >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_ADDRESS=$PL\"        >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_TELEPHONE=$PL\"      >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_MEASUREMENT=$PL\"    >> /etc/locale.conf"
+arch-chroot $M bash -c "echo \"LC_IDENTIFICATION=$PL\" >> /etc/locale.conf"
+
 arch-chroot $M bash -c "echo \"KEYMAP=pl\" > /etc/vconsole.conf"
 arch-chroot $M locale-gen
 
