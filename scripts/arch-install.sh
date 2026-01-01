@@ -75,7 +75,7 @@ arch-chroot $M locale-gen
 
 arch-chroot $M sed -i "s/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/" /etc/sudoers
 arch-chroot $M sed -i 's/^#Color/Color/;s/^#VerbosePkgLists/VerbosePkgLists/' /etc/pacman.conf
-arch-chroot $M sed -i 's/^#\s*\(\[multilib\]\|Include = \/etc\/pacman.d\/mirrorlist\)/\1/' /etc/pacman.conf
+arch-chroot $M sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 arch-chroot $M ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 arch-chroot $M bash -c "echo $HOSTNAME > /etc/hostname"
@@ -98,7 +98,7 @@ arch-chroot $M bash -c "echo \"initrd /initramfs-linux.img\" >> /boot/loader/ent
 arch-chroot $M bash -c "echo \"options root=$(blkid -o export $D2 | head -n2 | tail -n1) rw rootflags=subvol=@\" >> /boot/loader/entries/arch.conf"
 
 # Post install packages
-arch-chroot $M pacman -Syyu --noconfirm --needed wireplumber pipewire pipewire-{pulse,jack,alsa} cosmic lib32-vulkan-icd-loader vulkan-icd-loader vulkan-radeon lib32-vulkan-radeon mpv ffmpeg yt-dlp noto-fonts-{cjk,emoji} flatpak xdg-desktop-portal-gtk firefox lazygit fastfetch upower tuned tuned-ppd docker docker-compose virtualbox virtualbox-host-modules-arch libnotify wl-clipboard zed rustup lib32-libpulse mission-center steam gamescope
+arch-chroot $M pacman -Syyu --noconfirm --needed wireplumber pipewire pipewire-{pulse,jack,alsa} cosmic lib32-vulkan-icd-loader vulkan-icd-loader vulkan-radeon lib32-vulkan-radeon mpv ffmpeg yt-dlp noto-fonts-{cjk,emoji} flatpak xdg-desktop-portal-gtk firefox lazygit fastfetch upower tuned tuned-ppd docker docker-compose virtualbox virtualbox-host-modules-arch libnotify wl-clipboard zed rustup lib32-libpulse mission-center steam gamescope zip unzip unrar tar
 
 # Start services
 arch-chroot $M systemctl enable sshd cosmic-greeter tuned tuned-ppd NetworkManager avahi-daemon bluetooth
