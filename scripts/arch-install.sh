@@ -53,7 +53,7 @@ mount $D1 $M/boot
 pacstrap -K $M\
 	base base-devel linux linux-{headers,firmware} efibootmgr archlinux-keyring\
 	networkmanager btrfs-progs dosfstools intel-ucode exfatprogs ntfs-3g fuse fuse2 fuse3 sshfs rsync openssh\
-	fish zellij neovim helix git nushell less htop mc man tealdeer\
+	fish zellij neovim helix git nushell less htop mc man-db tealdeer\
 	xdg-user-dirs bluez bluez-{tools,utils} usbutils
 
 # Genfstab
