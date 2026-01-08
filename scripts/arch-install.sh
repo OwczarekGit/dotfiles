@@ -50,7 +50,11 @@ mount -o compress=zstd:15,subvol=@home $D2 $M/home
 mount $D1 $M/boot
 
 # Install base system
-pacstrap -K $M base base-devel linux linux-{headers,firmware} efibootmgr fish zellij neovim helix networkmanager git nushell btrfs-progs dosfstools intel-ucode less htop mc exfatprogs ntfs-3g fuse fuse2 fuse3 sshfs rsync man tealdeer xdg-user-dirs openssh archlinux-keyring bluez bluez-{tools,utils}
+pacstrap -K $M\
+	base base-devel linux linux-{headers,firmware} efibootmgr archlinux-keyring\
+	networkmanager btrfs-progs dosfstools intel-ucode exfatprogs ntfs-3g fuse fuse2 fuse3 sshfs rsync openssh\
+	fish zellij neovim helix git nushell less htop mc man tealdeer\
+	xdg-user-dirs bluez bluez-{tools,utils} usbutils
 
 # Genfstab
 genfstab -U $M > $M/etc/fstab
@@ -98,10 +102,28 @@ arch-chroot $M bash -c "echo \"initrd /initramfs-linux.img\" >> /boot/loader/ent
 arch-chroot $M bash -c "echo \"options root=$(blkid -o export $D2 | head -n2 | tail -n1) rw rootflags=subvol=@\" >> /boot/loader/entries/arch.conf"
 
 # Post install packages
-arch-chroot $M pacman -Syyu --noconfirm --needed wireplumber pipewire pipewire-{pulse,jack,alsa} cosmic lib32-vulkan-icd-loader vulkan-icd-loader vulkan-radeon lib32-vulkan-radeon mpv ffmpeg yt-dlp noto-fonts-{cjk,emoji} flatpak xdg-desktop-portal-gtk firefox lazygit fastfetch upower tuned tuned-ppd docker docker-compose virtualbox virtualbox-host-modules-arch libnotify wl-clipboard zed rustup lib32-libpulse mission-center steam gamescope zip unzip unrar tar
+arch-chroot $M pacman -Syyu --noconfirm --needed\
+	wireplumber pipewire pipewire-{pulse,jack,alsa} lib32-libpulse\
+	cosmic\
+	libnotify wl-clipboard\
+	xdg-desktop-portal-gtk mission-center flatpak\
+	lib32-vulkan-icd-loader vulkan-icd-loader vulkan-radeon lib32-vulkan-radeon\
+	mpv ffmpeg yt-dlp\
+	noto-fonts-{cjk,emoji}\
+	upower tuned tuned-ppd\
+	docker docker-compose virtualbox virtualbox-host-modules-arch\
+	zed rustup firefox lazygit fastfetch\
+	steam gamescope\
+	zip unzip unrar tar
 
 # Start services
-arch-chroot $M systemctl enable sshd cosmic-greeter tuned tuned-ppd NetworkManager avahi-daemon bluetooth
+arch-chroot $M systemctl enable\
+	cosmic-greeter\
+	sshd\
+	tuned tuned-ppd\
+	NetworkManager\
+	avahi-daemon\
+	bluetooth
 
 # User configuration
 arch-chroot $M useradd -m -s /usr/bin/nu -g users -G wheel,power,storage,floppy,optical,input,docker,vboxusers $USER
