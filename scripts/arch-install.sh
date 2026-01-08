@@ -29,10 +29,10 @@ EN=en_US.UTF-8
 PL=pl_PL.UTF-8
 
 # Partition
-sgdisk -Z $D
-sgdisk -o $D
-sgdisk -n 1:2048:1G -t 1:ef00 $D
-sgdisk -N 2 -t 1:8300 $D
+sgdisk -Z -o\
+	-n 1:2048:+1G -t 1:ef00\
+	-N 2 -t 2:8300\
+	$D
 
 # Format
 mkfs.fat -F32 $D1
